@@ -89,6 +89,6 @@ def main(searchPhrase):
     click_ads()
 
 for i in range(3):
-    main("Domain")
+    main("Domain Buying")
 
 stop_script()
