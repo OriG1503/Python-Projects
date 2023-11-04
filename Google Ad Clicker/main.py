@@ -57,11 +57,11 @@ def click_ads():
     adClickAbleSections = find_ads()
     length = len(adClickAbleSections)
 
-    for i in range(0, length):
-        action.key_down(Keys.CONTROL).perform()
-        adClickAbleSections[i].click()
-        action.key_up(Keys.CONTROL).perform()
+    for link in adClickAbleSections:
+        # Open the link in a new tab
+        link.send_keys(Keys.CONTROL + Keys.RETURN)
         time.sleep(2)
+
     time.sleep(3)
 
     enter_ads_tabs(length)
